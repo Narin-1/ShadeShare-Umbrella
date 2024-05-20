@@ -5,7 +5,7 @@
 }
 #header {
     height: 100vh;
-    background:linear-gradient(rgba(0,0,0,0.5),#f0f0f09c), url(Images/Image\ 2_Backgrd.jpg);
+    background:linear-gradient(#f0f0f0,#e0e0e018),url(Images/Image\ 2_Backgrd.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -13,12 +13,37 @@
 .container{
     margin-right: 80px;
     margin-left: 80px;
+    color:#FFFFFF);
 }
 .Logo{
     margin-top: 30px;
     width: 100px;
     height: 100px;
 }
+.header-text{
+    max-width: 350px;
+    margin-top: 140px;
+}
+h1{34px}
 
-
+.square{
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background: #0a0de6;
+  margin: 15px 0;
+}
+.common-btn{
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #0a0de6;
+    font font-weight: bold;
+    cursor: pointer;
+}
+p{
+    font size: 15px;
+    line-height: 18px;
+    color: #777;
+}
 
