@@ -1,54 +1,165 @@
-*{
+/* Basic reset */
+* {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
 }
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header section styles */
 #header {
     height: 100vh;
-    background:linear-gradient(#f0f0f0,#e0e0e018),url(Images/Image\ 2_Backgrd.jpg);
+    background: linear-gradient(to bottom, rgba(240, 240, 240, 0.8), rgba(224, 224, 224, 0.8)), url(Images/Image\ 2_Backgrd.jpg);
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.container{
-    margin-right: 80px;
-    margin-left: 80px;
-    color:#FFFFFF);
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 80px;
 }
-.Logo{
-    margin-top: 30px;
-    width: 100px;
-    height: 100px;
-}
-.header-text{
-    max-width: 350px;
-    margin-top: 140px;
-}
-h1{34px}
 
-.square{
-  height: 12px;
-  width: 12px;
-  display: inline-block;
-  background: #0a0de6;
-  margin: 15px 0;
-}
-.common-btn{
-    padding: 18px 40px;
-    background: transparent;
-    outline: none;
-    border: 2px solid #0a0de6;
-    font font-weight: bold;
-    cursor: pointer;
-}
-p{
-    font size: 15px;
-    line-height: 18px;
-    color: #777;
-}
-.header-text button {
+/* Logo styling */
+.logo {
     margin-top: 20px;
-    margin-bottom; 60px
+    width: 70px;
+    height: 70px;
 }
 
+/* Header text styling */
+.header-text {
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.common-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0b0ebb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.common-btn:hover {
+    background-color: #0a0aa6;
+}
+
+/* Side navigation styling */
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px; /* Initially hidden */
+    top: 0;
+    background: #0b0ebb;
+    z-index: 2;
+    transition: right 0.3s ease; /* Smooth transition */
+    color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+}
+
+#sideNav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sideNav ul li {
+    padding: 15px 20px;
+}
+
+#sideNav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+#sideNav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Menu button styling */
+#menuBTN {
+    width: 40px;
+    height: 40px;
+    background-color: #0b0ebb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 65px;
+    top: 35px;
+    z-index: 3; /* Ensure it's above the sideNav */
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+}
+
+#menuBTN:hover {
+    background-color: #0a0aa6;
+}
+/*---ABOUT---*/
+
+#ABOUT{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.ABOUT-left-col{
+    flex-basis: 50%;
+}
+.ABOUT-left-col img{
+    width: 100%;
+}
+.ABOUT-right-col{
+    flex-basis: 50%;
+    text-align: center;
+}
+.about-text{
+    max-width: 500px;
+    margin-right: 100px;
+    display: inline-block;
+}
+.about-text h2{
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-style: italic;
+}
+.about-text h3{
+     font-size: 20px;
+    font-style: italic;
+    color: #0a0aa6;
 }
