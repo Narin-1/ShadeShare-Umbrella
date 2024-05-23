@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Body styling */
@@ -59,17 +60,23 @@ p {
 /* Button styling */
 .common-btn {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #0b0ebb;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .common-btn:hover {
     background-color: #0a0aa6;
+}
+
+.common-btn:active {
+    transform: translateY(1px);
 }
 
 /* Side navigation styling */
@@ -128,38 +135,84 @@ p {
 #menuBTN:hover {
     background-color: #0a0aa6;
 }
-/*---ABOUT---*/
 
-#ABOUT{
+/* ABOUT Section styling */
+#ABOUT {
     padding: 100px 0;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
-.ABOUT-left-col{
+.ABOUT-left-col {
     flex-basis: 50%;
 }
-.ABOUT-left-col img{
+
+.ABOUT-left-col img {
     width: 100%;
 }
-.ABOUT-right-col{
+
+.ABOUT-right-col {
     flex-basis: 50%;
     text-align: center;
 }
-.about-text{
+
+.about-text {
     max-width: 500px;
-    margin-right: 100px;
+    margin-right: 50px; /* Adjusted margin to provide more space */
     display: inline-block;
 }
-.about-text h2{
+
+.about-text h2 {
     margin: 50px 0 10px;
     font-size: 28px;
     font-style: italic;
 }
-.about-text h3{
-     font-size: 20px;
+
+.about-text h3 {
+    font-size: 20px;
     font-style: italic;
     color: #0a0aa6;
 }
+
+/* FEATURES Section styling */
+#features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.features-row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.features-col {
+    flex-basis: 25%;
+    text-align: center;
+}
+
+.features-col img {
+    width: 100px;
+}
+
+.feature-col h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Feature Button styling */
+.feature-btn {
+    margin: 20px auto 0; /* Adjusted margin to avoid overlap */
+    padding: 8px 16px;
+    display: flex
+
+
+
+
+
+
