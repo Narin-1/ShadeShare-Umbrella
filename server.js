@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      // Simple validation (you can add more)
+      // Simple validation
       if (name && email && password) {
           // Display success message
           document.getElementById('successMessage').classList.remove('hidden');
@@ -80,6 +80,58 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
   });
 });
+
+// Add event listener to sign in button
+signinBtn.onclick = function() {
+  // Check if the current state is sign in
+  if (title.innerHTML === "Sign In") {
+      // Get form values
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Check if email and password are not empty
+      if (email && password) {
+          // Assuming 'successMessage' is the element where you want to display the success message
+          // Change 'successMessage' to the actual ID or class of the element you want to use
+          var successMessage = document.getElementById("successMessage");
+
+          // Perform the sign-in process here
+          // For demonstration purposes, let's assume the sign-in is successful
+          var signInSuccessful = true;
+
+          if (signInSuccessful) {
+              // Show the success message
+              successMessage.style.display = "block";
+              successMessage.innerHTML = "Sign in successful!"; // You can customize this message
+          } else {
+              // If sign-in fails, you can display an error message instead
+              successMessage.style.display = "none"; // Hide the success message if displayed
+              // Display an error message or perform other actions as needed
+          }
+
+          // Reset other elements as needed
+          nameField.style.maxHeight = "0px";
+          title.innerHTML = "Sign In";
+          signinBtn.classList.add("active");
+          signinBtn.classList.remove("disabled");
+          signupBtn.classList.remove("active");
+          signupBtn.classList.add("disabled");
+      } else {
+          // If email or password is empty, do not proceed with sign-in and show an error message
+          alert('Please enter your email and password.');
+      }
+  } else {
+      // If the current state is sign up, toggle to sign in
+      nameField.style.maxHeight = "0px";
+      title.innerHTML = "Sign In";
+      signinBtn.classList.add("active");
+      signinBtn.classList.remove("disabled");
+      signupBtn.classList.remove("active");
+      signupBtn.classList.add("disabled");
+  }
+};
+
+
 
 
 
