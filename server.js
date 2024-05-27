@@ -102,7 +102,7 @@ signinBtn.onclick = function() {
           if (signInSuccessful) {
               // Show the success message
               successMessage.style.display = "block";
-              successMessage.innerHTML = "Sign in successful!"; // You can customize this message
+              successMessage.innerHTML = "Welcome Back!";
           } else {
               // If sign-in fails, you can display an error message instead
               successMessage.style.display = "none"; // Hide the success message if displayed
