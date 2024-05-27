@@ -1284,6 +1284,15 @@ form p a{
   height: 280px;
 }
 
+.hidden {
+  display: none;
+}
+
+#successMessage {
+  color: rgb(0, 30, 128);
+  font-size: 16px;
+  margin-top: 20px;
+}
 
   
 

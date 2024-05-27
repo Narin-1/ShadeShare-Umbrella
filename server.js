@@ -60,7 +60,26 @@ signinBtn.onclick = function() {
     signupBtn.classList.add("disabled");
 };
 
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.getElementById('signupBtn').addEventListener('click', function() {
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
 
+      // Simple validation (you can add more)
+      if (name && email && password) {
+          // Display success message
+          document.getElementById('successMessage').classList.remove('hidden');
+
+          // Optionally, reset the form
+          document.getElementById('signupForm').reset();
+      } else {
+          // Handle validation error
+          alert('Please fill out all fields.');
+      }
+  });
+});
 
 
 

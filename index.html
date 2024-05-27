@@ -107,28 +107,30 @@
 <div class="container" id="signup">
   <div class="form-box">
     <h1 id="title">Sign Up</h1>
-    <form>
+    <form id="signupForm" autocomplete="off">
       <div class="input-group">
         <div class="input-field" id="nameField">
           <i class="fa-solid fa-user"></i>
-          <input type="text" placeholder="Name">
-      </div>
+          <input type="text" placeholder="Name" id="name" autocomplete="off">
+        </div>
         <div class="input-field">
           <i class="fa-solid fa-envelope"></i>
-          <input type="Email" placeholder="Email">
-      </div>
-      
+          <input type="Email" placeholder="Email" id="email" autocomplete="off">
+        </div>
         <div class="input-field">
           <i class="fa-solid fa-lock"></i>
-          <input type="password" placeholder="Password">
-      </div>
-      <p>Lost Password <a href="#">Click Here!</a></p>
+          <input type="password" placeholder="Password" id="password" autocomplete="new-password">
+        </div>
+        <p>Lost Password <a href="#">Click Here!</a></p>
       </div>
       <div class="btn-field">
         <button type="button" id="signupBtn" class="active">Sign Up</button>
         <button type="button" id="signinBtn" class="disabled">Sign In</button>
       </div>
     </form>
+    <div id="successMessage" class="hidden">Registration Successful!</div>
+  </div>
+</div>
   </div>
 </div>
 
