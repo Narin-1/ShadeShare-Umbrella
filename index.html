@@ -6,34 +6,134 @@
     <title>ShadeShare</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/c4459da0da.js" crossorigin="anonymous"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7H0X58JCBW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7H0X58JCBW');
+</script>
+
 </head>
 <body>
-    <!--Navbar Section-->
-    <nav class="--Navbar">
-        <div class="navbar_container">
-            <a href="#home" id="navbar__logo">COLOR</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span> 
+   <!-- Navbar Section -->
+<nav class="navbar">
+  <div class="navbar__container">
+      <a href="#home" id="navbar__logo">ShadeShare</a>
+      <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+          <li class="navbar__item">
+              <a href="#home" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+              <a href="#about" class="navbar__links" id="about-page">About Us</a>
+          </li>
+          <li class="navbar__item">
+              <a href="#services" class="navbar__links" id="HowShadeshareWorks-page">How Shadeshare Works</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="#SignUp-page" class="navbar__links" id="SignUp-page">Sign Up</a>
+
+          </li>
+      </ul>
+  </div>
+</nav>
+
+</nav>
+
+      <!-- Hero Section -->
+      <div class="hero" id="home">
+        <div class="hero__container">
+
+          <h1 class="hero__heading">Shade<span>Share</span></h1>
+          <p class="hero__description">Stay Dry As A Desert<br>In A Rainstorm</p>
+          <button class="main__btn"><a href="#">Learn More</a></button>
         </div>
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="home" class="navbar__links" id="home-page">Home</a>
-            </li>
-            <li class="navbar__item">
-                <a href="about us" class="navbar__links" id="about us-page">About Us</a>
-            </li>
-            <li class="navbar__item">
-                <a href="how it works" class="navbar__links" id="how it works-page">How It Works</a>
-            </li>
-            <li class="navbar__btn">
-                <a href="#sing up" class="button" id="sign up-page">Sign Up</a>
-            </li>
-        </ul>
-    
+      </div>
+
+      <!-- About Section -->
+    <div class="main" id="about">
+      <div class="main__container">
+        <div class="main__img--container">
+          <div class="main__img--card"><img src="Images/Image 10_cartoon women in rain.jpg" alt=""></div>
         </div>
-    
-    </nav>
+        <div class="main__content">
+          <h1>About Us</h1>
+          <h2>ShadeShare observed that people are often caught in the rain. </h2>
+          <p>Time is lost waiting for the rain to either subside or waste resource to buy an umbrella on the go.</p>
+          
+
+
+        </div>
+      </div>
+    </div>
+<!-- Services Section -->
+<div class="services" id="services">
+  <h1>How ShadeShare Works</h1>
+  <div class="services__wrapper">
+      <div class="services__card">
+          <h2>Sign Up</h2>
+          <p>Register for an ShadeShare account online or at any kiosk</p>
+          <div class="services__img"><img src="Images/how-it-works_01.png" alt="sign up image"/></div>
+      </div>
+      <div class="services__card">
+          <h2>Find a Kiosk</h2>
+          <p>Find any kiosk nearest to you</p>
+          <div class="services__img"><img src="Images/how-it-works_02.png" alt="Find a kiosk image" /></div>
+      </div>
+      <div class="services__card">
+          <h2>Borrow</h2>
+          <p>Log in with your phone number to borrow out an umbrella</p>
+          <div class="services__img"><img src="Images/how-it-works_03.png" alt="borrow image" /></div>
+      </div>
+      <div class="services__card">
+          <h2>Return</h2>
+          <p>Simple place the umbrella in any kiosk</p>
+          <div class="services__img"><img src="Images/how-it-works_04.png" alt="return image" /></div>
+      </div>
+  </div>
+</div>
+
+<!-- Sign up Section -->
+
+<div class="container">
+  <div class="form-box">
+    <h1 id="title">Sign Up</h1>
+    <form>
+      <div class="input-group">
+        <div class="input-field" id="nameField">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Name">
+      </div>
+        <div class="input-field">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="Email" placeholder="Email">
+      </div>
+      
+        <div class="input-field">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Password">
+      </div>
+      <p>Lost Password <a href="#">Click Here!</a></p>
+      </div>
+      <div class="btn-field">
+        <button type="button" id="signupBtn" class="active">Sign Up</button>
+        <button type="button" id="signinBtn" class="disabled">Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script src="server.js"></script>
+
 </body>
 </html>
